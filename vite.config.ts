@@ -7,6 +7,10 @@ import react from '@vitejs/plugin-react';
 // We derive it from import.meta.url to ensure path resolution works correctly.
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
+export default defineConfig({
+  base: '/welosefer-church/', // This must match your repo name exactly
+  plugins: [react()],
+})
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
